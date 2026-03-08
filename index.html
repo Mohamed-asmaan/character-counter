@@ -12,14 +12,10 @@
   <main>
     <h1>Message</h1>
     <p>200 characters max</p>
-    <textarea id="message" name="message" rows="5" placeholder="Type your message here..." maxlength="200"></textarea>
+    <textarea id="message" name="message" rows="5" placeholder="Type your message here..." maxlength="200" oninput="updateCounter()"></textarea>
     <p><span id="counter">0/200 characters</span></p>
     <p id="warning"></p>
   </main>
-
-
-
-
 
   <script src="script.js"></script>
 </body>

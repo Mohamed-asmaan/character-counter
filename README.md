@@ -8,7 +8,7 @@ A simple web app that counts characters in real time as you type, with a 200-cha
 - Remaining characters display
 - Warning message when limit is reached
 - Red border on textarea at limit
-- Plain HTML, CSS, and JavaScript — no frameworks
+- Traditional HTML, CSS, and JavaScript — beginner-friendly, no frameworks
 
 ## How to Run
 
@@ -24,7 +24,3 @@ character-counter/
 ├── script.js    # Character counting logic
 └── README.md
 ```
-
-## License
-
-MIT

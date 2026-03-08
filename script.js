@@ -1,24 +1,26 @@
-const MAX_CHARS = 200;
-const textarea = document.getElementById('message');
-const counterEl = document.getElementById('counter');
-const warningEl = document.getElementById('warning');
+// Character limit
+var maxChars = 200;
 
+// Get elements from the page
+var textarea = document.getElementById("message");
+var counterEl = document.getElementById("counter");
+var warningEl = document.getElementById("warning");
+
+// Update the counter when user types
 function updateCounter() {
-  const currentLength = textarea.value.length;
-  const remaining = MAX_CHARS - currentLength;
+  var currentLength = textarea.value.length;
+  var remaining = maxChars - currentLength;
 
-  counterEl.textContent = currentLength + "/" + MAX_CHARS + " characters (" + remaining + " remaining)";
+  counterEl.innerHTML = currentLength + "/" + maxChars + " characters (" + remaining + " remaining)";
 
-  if (currentLength >= MAX_CHARS) {
-    textarea.classList.add('limit-reached');
-    warningEl.textContent = 'Character limit reached. You cannot type more.';
+  if (currentLength >= maxChars) {
+    textarea.className = "limit-reached";
+    warningEl.innerHTML = "Character limit reached. You cannot type more.";
   } else {
-    textarea.classList.remove('limit-reached');
-    warningEl.textContent = '';
+    textarea.className = "";
+    warningEl.innerHTML = "";
   }
 }
 
-textarea.addEventListener('input', updateCounter);
-
-// Initial state
+// Show counter when page loads
 updateCounter();
