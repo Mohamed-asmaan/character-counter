@@ -14,7 +14,8 @@ main {
   flex-direction: column;
   background-color: white;
   padding: 20px;
-  width: 400px;
+  width: 90%;
+  max-width: 400px;
   border: 1px solid #ccc;
 }
 
@@ -27,7 +28,6 @@ main > p:first-of-type {
 }
 
 textarea {
-  /* width: 100%; */
   padding: 10px;
   border: 1px solid #999;
   font-size: 16px;
